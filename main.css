@@ -302,7 +302,7 @@ ul {
   transition: var(--transition);
 }
 
-.imgs::after {
+.imgs:hover::after {
   content: "";
   background-color: hsl(178, 100%, 50%, 0.4);
   position: absolute;
@@ -311,13 +311,7 @@ ul {
   left: 0;
   right: 0;
   border-radius: 15px;
-  visibility: hidden;
   cursor: pointer;
-}
-
-.imgs:hover .imgs::after {
-  visibility: visible;
-  z-index: 2;
 }
 
 .imgs {
