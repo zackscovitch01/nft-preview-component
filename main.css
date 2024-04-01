@@ -298,12 +298,53 @@ ul {
 
 .main-img {
   border-radius: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.imgs::after {
+  content: "";
+  background-color: hsl(178, 100%, 50%, 0.4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.imgs:hover .imgs::after {
+  visibility: visible;
+  z-index: 2;
+}
+
+.imgs {
+  position: relative;
+}
+
+.imgs:hover .eye-img {
+  visibility: visible;
+}
+
+.eye-img {
+  position: absolute;
+  top: 140px;
+  left: 140px;
+  visibility: hidden;
 }
 
 .main-text h1 {
   color: var(--white);
   font-size: 1.8rem;
   margin-top: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.main-text h1:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .main-text p {
@@ -365,4 +406,10 @@ ul {
 
 .avatar-name {
   color: var(--white);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.avatar-name:hover {
+  color: hsl(178, 100%, 50%);
 }
